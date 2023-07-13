@@ -13,6 +13,8 @@ from sklearn.model_selection import train_test_split
 from dataclasses import dataclass
 
 
+
+
 # whenever we made a data ingestion component we have to make a separate folder
 # in which we store the outputs gain from this component like train_data, test_data etc.
 
@@ -81,7 +83,9 @@ class DataIngestion:
             logging.info('Error occured in Data Ingestion config')
             raise CustomException(e,sys)
     
-
+'''
 if __name__ == '__main__':
     obj = DataIngestion()
     obj.initiate_data_ingestion()
+
+    '''
