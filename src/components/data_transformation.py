@@ -113,6 +113,7 @@ class DataTransformation:
             logging.info("Applying preprocessing object on training and testing datasets.")
 
             ## Now we concatenate the inputs array with targets because we want them into single array
+            ## Because from this we get last column a target columns so in model training we split it again
             train_arr = np.c_[input_feature_train_arr,np.array(target_feature_train_df)]
             test_arr = np.c_[input_feature_test_arr,np.array(target_feature_test_df)]
 
@@ -135,7 +136,7 @@ class DataTransformation:
             raise CustomException(e,sys)
 
 ## Now to check wheteher it is running properly
-
+'''
 from src.components.data_ingestion import DataIngestion
 
 if __name__ == '__main__':
@@ -145,6 +146,7 @@ if __name__ == '__main__':
     data_transformation = DataTransformation()
     data_transformation.initiate_data_transformation(train_data,test_data)
 
+    '''
 
 
         
