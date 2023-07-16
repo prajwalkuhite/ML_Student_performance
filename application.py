@@ -69,14 +69,6 @@ def predict_datapoint_postman():
         return jsonify(results=results[0])
 
 if __name__=='__main__':
-    app.run(host="0.0.0.0",debug=True)
+    app.run(host="0.0.0.0")
 
 
-
-
-## Now for deployment we have to make .ebextensions and inside it python.config
-## so for deployment in aws elaticbeanstalk we have to set a entry point for our
-## application to tell to the elasticbeanstalk
-## and also we have to create application.py beacause elasticbeanstalk not understand
-## app.py so we copy content and paste it
-## Also always ensure that we have to remove - debug=True
